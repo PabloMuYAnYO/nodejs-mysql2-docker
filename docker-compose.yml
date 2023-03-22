@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  nodetest:
+    image: node
+    container_name: projectnode
+    build: .
+    ports:
+      - "9000:3000"
+    command: node server.js
+  db:
+  image: mongo
+  container_name: mymongo
+  ports:
+    - "27017:27017"
